@@ -1,0 +1,300 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Adrian Boronciuc - Frontend Developer</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.10.4/gsap.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.10.4/ScrollTrigger.min.js"></script>
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+</head>
+
+<body class="bg-slate-900 text-slate-200 font-sans overflow-x-hidden">
+  <div
+    class="absolute top-[10%] left-[5%] w-72 h-72 rounded-full bg-gradient-to-r from-violet-600 to-transparent opacity-30 blur-[100px] -z-10">
+  </div>
+  <div
+    class="absolute top-[50%] right-[10%] w-72 h-72 rounded-full bg-gradient-to-r from-violet-600 to-transparent opacity-30 blur-[100px] -z-10">
+  </div>
+  <div
+    class="absolute bottom-[10%] left-[20%] w-72 h-72 rounded-full bg-gradient-to-r from-violet-600 to-transparent opacity-30 blur-[100px] -z-10">
+  </div>
+
+  <header class="h-screen flex items-center justify-center relative">
+    <div class="absolute inset-0 pointer-events-none overflow-hidden">
+      <div
+        class="logo-card absolute top-[10%] left-[60%] w-20 h-20 flex items-center justify-center bg-white/10 backdrop-blur rounded-xl transform transition-transform duration-300 hover:scale-110">
+        <img src="/Assests/vscode-original.svg" alt="VSCode" class="w-10 h-10">
+      </div>
+      <div
+        class="logo-card absolute top-[20%] left-[30%] w-20 h-20 flex items-center justify-center bg-white/10 backdrop-blur rounded-xl transform transition-transform duration-300 hover:scale-110">
+        <img src="/Assests/tailwindcss-plain.svg" alt="VSCode" class="w-10 h-10">
+      </div>
+      <div
+        class="logo-card absolute bottom-[25%] left-[5%] w-20 h-20 flex items-center justify-center bg-white/10 backdrop-blur rounded-xl transform transition-transform duration-300 hover:scale-110">
+        <img src="/Assests/figma-original.svg" alt="VSCode" class="w-10 h-10">
+      </div>
+      <div
+        class="logo-card absolute top-[30%] left-[10%] w-20 h-20 flex items-center justify-center bg-white/10 backdrop-blur rounded-xl transform transition-transform duration-300 hover:scale-110">
+        <img src="/Assests/react-original.svg" alt="VSCode" class="w-10 h-10">
+      </div>
+      <div
+        class="logo-card absolute top-[40%] left-[50%] w-20 h-20 flex items-center justify-center bg-white/10 backdrop-blur rounded-xl transform transition-transform duration-300 hover:scale-110">
+        <img src="/Assests/vuejs-original.svg" alt="VSCode" class="w-10 h-10">
+      </div>
+      <div
+        class="logo-card absolute top-[70%] left-[35%] w-20 h-20 flex items-center justify-center bg-white/10 backdrop-blur rounded-xl transform transition-transform duration-300 hover:scale-110">
+        <img src="/Assests/linux-original.svg" alt="VSCode" class="w-10 h-10">
+      </div>
+      <div
+        class="logo-card absolute top-[60%] right-[40%] w-20 h-20 flex items-center justify-center bg-white/10 backdrop-blur rounded-xl transform transition-transform duration-300 hover:scale-110">
+        <img src="/Assests/github-original.svg" alt="GitHub" class="w-10 h-10">
+      </div>
+    </div>
+
+    <div class="container mx-auto px-4 flex items-center justify-between relative z-10">
+      <div class="text-center md:text-left">
+        <h1 class="text-6xl font-bold text-teal-500">BORONCIUC ADRIAN</h1>
+        <p class="text-2xl mt-4 text-pink-600">FRONTEND DEVELOPER</p>
+        <nav class="mt-8">
+          <a href="#about" class="mx-3 hover:text-teal-500 transition-colors">About</a>
+          <a href="#experience" class="mx-3 hover:text-teal-500 transition-colors">Experience</a>
+          <a href="#projects" class="mx-3 hover:text-teal-500 transition-colors">Projects</a>
+          <a href="#skills" class="mx-3 hover:text-teal-500 transition-colors">Skills</a>
+          <a href="#studies" class="mx-3 hover:text-teal-500 transition-colors">Studies</a>
+          <a href="#contact" class="mx-3 hover:text-teal-500 transition-colors">Contact</a>
+        </nav>
+      </div>
+      <div class="hidden md:block">
+        <img src="/Assests/image.jpg" class="rounded-lg shadow-lg max-h-[70vh] relative -z-10">
+      </div>
+    </div>
+  </header>
+
+  <section id="about" class="py-20 relative">
+    <div class="container mx-auto px-4">
+      <div class="text-center">
+        <h2 class="text-4xl font-bold mb-6 text-teal-500">About Me</h2>
+        <div class="max-w-2xl mx-auto">
+          <div
+            class="bg-white/10 backdrop-blur rounded-xl p-4 transform transition-all duration-300 hover:-translate-y-2 hover:shadow-xl">
+            <p class="text-lg">
+              I am a skilled web developer with two years of hands-on experience in coding and scripting. Through
+              self-driven projects
+              and continuous learning, I have developed strong problem-solving abilities and a keen eye for detail. I am
+              passionate
+              about writing clean, efficient code and collaborating with others to build functional and visually
+              appealing
+              applications. While I have not yet worked in a company setting, I am eager to apply my knowledge in a
+              professional
+              environment and grow as a developer.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="experience" class="py-20 relative">
+    <div class="container mx-auto px-4">
+      <h2 class="text-4xl font-bold text-center mb-12 text-teal-500">Experience</h2>
+      <div class="flex items-center justify-center">
+        <div
+          class="bg-white/10 backdrop-blur rounded-xl p-4 transform transition-all duration-300 hover:-translate-y-2 hover:shadow-xl md:w-1/2 w-3/4">
+          <h3 class="text-2xl font-bold text-pink-600">Frontend Development</h3>
+          <p class="mt-4">
+            Website design and development, maintaining old projects, bug-fixing, and developing SPAs and SSR
+            applications.
+            I have learned frontend development through hands-on projects, self-study, and continuous experimentation.
+            By tackling real-world challenges and exploring new technologies, I have refined my skills in building
+            modern,
+            responsive, and user-friendly web applications.
+          </p>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <section id="projects" class="py-20 relative">
+    <div class="container mx-auto px-4">
+      <h2 class="text-4xl font-bold text-center mb-12 text-teal-500">Projects</h2>
+      <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+        <div
+          class="bg-white/10 backdrop-blur rounded-xl p-4 transform transition-all duration-300 hover:-translate-y-2 hover:shadow-xl">
+          <img src="/Assests/micropagic.png" alt="Project 1" class="w-full h-48 object-cover rounded-lg mb-4">
+          <div>
+            <h3 class="text-xl font-bold text-pink-600">MicroMagic</h3>
+            <p class="mt-2">A modern E-Commerce website made with Vue.js, TailwindCSS</p>
+            <div class="mt-4 flex gap-4">
+              <a href="https://vuejs-micromagic.vercel.app/" target="_blank"
+                class="bg-pink-600 text-white px-4 py-2 rounded-lg hover:bg-pink-700 transition">Live Demo</a>
+              <a href="https://github.com/adrian-237/vuejs-micromagic" target="_blank"
+                class="bg-gray-800 text-white px-4 py-2 rounded-lg hover:bg-gray-900 transition">GitHub</a>
+            </div>
+          </div>
+        </div>
+
+        <div
+          class="bg-white/10 backdrop-blur rounded-xl p-4 transform transition-all duration-300 hover:-translate-y-2 hover:shadow-xl">
+          <img src="/Assests/platzi.png" alt="Project 1" class="w-full h-48 object-cover rounded-lg mb-4">
+          <div>
+            <h3 class="text-xl font-bold text-pink-600">E-Commerce Website</h3>
+            <p class="mt-2">A Commerce website made with React.js, that uses Platzi Fake store API. (Working with API
+              fetching)</p>
+            <div class="mt-4 flex gap-4">
+              <a href="https://platzi-shop-five.vercel.app/" target="_blank"
+                class="bg-pink-600 text-white px-4 py-2 rounded-lg hover:bg-pink-700 transition">Live Demo</a>
+              <a href="https://github.com/adrian-237/PlatziShop" target="_blank"
+                class="bg-gray-800 text-white px-4 py-2 rounded-lg hover:bg-gray-900 transition">GitHub</a>
+            </div>
+          </div>
+        </div>
+
+        <div
+          class="bg-white/10 backdrop-blur rounded-xl p-4 transform transition-all duration-300 hover:-translate-y-2 hover:shadow-xl">
+          <img src="/Assests/moviedb.png" alt="Project 1" class="w-full h-48 object-cover rounded-lg mb-4">
+          <div>
+            <h3 class="text-xl font-bold text-pink-600">MovieDB</h3>
+            <p class="mt-2">Movie database with filters. Uses TMDB API, Javascript, TailwindCSS</p>
+            <div class="mt-4 flex gap-4">
+              <a href="https://movie-db-three-xi.vercel.app/" target="_blank"
+                class="bg-pink-600 text-white px-4 py-2 rounded-lg hover:bg-pink-700 transition">Live Demo</a>
+              <a href="https://github.com/adrian-237/MovieDB" target="_blank"
+                class="bg-gray-800 text-white px-4 py-2 rounded-lg hover:bg-gray-900 transition">GitHub</a>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <section id="skills" class="py-20 relative">
+    <div class="container mx-auto px-4">
+      <h2 class="text-4xl font-bold text-center mb-12 text-teal-500">Skills</h2>
+      <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
+        <div
+          class="bg-white/10 backdrop-blur rounded-xl p-4 text-center transform transition-all duration-300 hover:-translate-y-2 hover:shadow-xl">
+          <h3 class="text-xl font-bold text-pink-600">HTML/CSS</h3>
+        </div>
+        <div
+          class="bg-white/10 backdrop-blur rounded-xl p-4 text-center transform transition-all duration-300 hover:-translate-y-2 hover:shadow-xl">
+          <h3 class="text-xl font-bold text-pink-600">React.js</h3>
+        </div>
+        <div
+          class="bg-white/10 backdrop-blur rounded-xl p-4 text-center transform transition-all duration-300 hover:-translate-y-2 hover:shadow-xl">
+          <h3 class="text-xl font-bold text-pink-600">Vue.js</h3>
+        </div>
+        <div
+          class="bg-white/10 backdrop-blur rounded-xl p-4 text-center transform transition-all duration-300 hover:-translate-y-2 hover:shadow-xl">
+          <h3 class="text-xl font-bold text-pink-600">Javascript</h3>
+        </div>
+        <div
+          class="bg-white/10 backdrop-blur rounded-xl p-4 text-center transform transition-all duration-300 hover:-translate-y-2 hover:shadow-xl">
+          <h3 class="text-xl font-bold text-pink-600">TailwindCSS</h3>
+        </div>
+        <div
+          class="bg-white/10 backdrop-blur rounded-xl p-4 text-center transform transition-all duration-300 hover:-translate-y-2 hover:shadow-xl">
+          <h3 class="text-xl font-bold text-pink-600">Bootstrap</h3>
+        </div>
+        <div
+          class="bg-white/10 backdrop-blur rounded-xl p-4 text-center transform transition-all duration-300 hover:-translate-y-2 hover:shadow-xl">
+          <h3 class="text-xl font-bold text-pink-600">Linux</h3>
+        </div>
+        <div
+          class="bg-white/10 backdrop-blur rounded-xl p-4 text-center transform transition-all duration-300 hover:-translate-y-2 hover:shadow-xl">
+          <h3 class="text-xl font-bold text-pink-600">MySQL</h3>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <section id="studies" class="py-20 relative">
+    <div class="container mx-auto px-4">
+      <h2 class="text-4xl font-bold text-center mb-12 text-teal-500">Studies</h2>
+      <div class="grid md:grid-cols-2 gap-8">
+        <div
+          class="bg-white/10 backdrop-blur rounded-xl p-4 transform transition-all duration-300 hover:-translate-y-2 hover:shadow-xl">
+          <h3 class="text-2xl font-bold text-pink-600">School</h3>
+          <p class="mt-4">IP Gimnaziu Teoretic Hîjdieni, 2012 - 2021</p>
+        </div>
+        <div
+          class="bg-white/10 backdrop-blur rounded-xl p-4 transform transition-all duration-300 hover:-translate-y-2 hover:shadow-xl">
+          <h3 class="text-2xl font-bold text-pink-600">Frontend Development Bootcamp</h3>
+          <p class="mt-4">CEITI, 2021-2025</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="contact" class="py-20 relative">
+    <div class="container mx-auto px-4">
+      <h2 class="text-4xl font-bold text-center mb-12 text-teal-500">Contact Me</h2>
+      <form class="max-w-2xl mx-auto">
+        <div class="mb-4">
+          <label for="name" class="block mb-2">Name</label>
+          <input type="text" id="name" class="w-full p-2 rounded bg-gray-800 text-white">
+        </div>
+        <div class="mb-4">
+          <label for="email" class="block mb-2">Email</label>
+          <input type="email" id="email" class="w-full p-2 rounded bg-gray-800 text-white">
+        </div>
+        <div class="mb-4">
+          <label for="message" class="block mb-2">Message</label>
+          <textarea id="message" class="w-full p-2 rounded bg-gray-800 text-white" rows="4"></textarea>
+        </div>
+        <button type="submit"
+          class="bg-teal-500 hover:bg-teal-600 text-white px-6 py-2 rounded transition-colors">Send</button>
+      </form>
+    </div>
+  </section>
+
+  <footer class="py-6 text-center relative">
+    <p>&copy; 2023 BORONCIUC ADRIAN. All rights reserved.</p>
+    <div class="mt-4">
+      <a href="#" class="mx-2 hover:text-teal-500 transition-colors"><i class="fab fa-linkedin"></i></a>
+      <a href="#" class="mx-2 hover:text-teal-500 transition-colors"><i class="fab fa-github"></i></a>
+      <a href="#" class="mx-2 hover:text-teal-500 transition-colors"><i class="fab fa-twitter"></i></a>
+    </div>
+  </footer>
+
+  <script>
+    function random(min, max) {
+      return Math.random() * (max - min) + min;
+    }
+
+    document.querySelectorAll('.logo-card').forEach(card => {
+      gsap.set(card, {
+        x: random(-20, 20),
+        y: random(-20, 20),
+        rotation: random(-10, 10)
+      });
+
+      gsap.to(card, {
+        duration: random(2, 4),
+        x: random(-30, 30),
+        y: random(-30, 30),
+        rotation: random(-15, 15),
+        ease: "power1.inOut",
+        repeat: -1,
+        yoyo: true,
+        repeatRefresh: true,
+        onRepeat: function () {
+          gsap.to(card, {
+            duration: random(2, 4),
+            x: random(-30, 30),
+            y: random(-30, 30),
+            rotation: random(-15, 15),
+            ease: "power1.inOut"
+          });
+        }
+      });
+    });
+  </script>
+</body>
+
+</html>
