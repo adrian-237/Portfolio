@@ -9,279 +9,356 @@
   <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.10.4/gsap.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.10.4/ScrollTrigger.min.js"></script>
   <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+
+  <style>
+    @keyframes spin {
+      0% {
+        transform: rotate(0deg);
+      }
+
+      100% {
+        transform: rotate(360deg);
+      }
+    }
+
+    .orbit-1 {
+      animation: spin 10s linear infinite reverse;
+    }
+
+    .orbit-2 {
+      animation: spin 15s linear infinite;
+    }
+
+    .orbit-3 {
+      animation: spin 6s linear infinite reverse;
+    }
+
+    .orbit-4 {
+      animation: spin 12s linear infinite;
+    }
+
+    .orbit-5 {
+      animation: spin 10s linear infinite;
+    }
+  </style>
 </head>
 
-<body class="bg-slate-900 text-slate-200 font-sans overflow-x-hidden">
-  <div
-    class="absolute top-[10%] left-[5%] w-72 h-72 rounded-full bg-gradient-to-r from-violet-600 to-transparent opacity-30 blur-[100px] -z-10">
-  </div>
-  <div
-    class="absolute top-[50%] right-[10%] w-72 h-72 rounded-full bg-gradient-to-r from-violet-600 to-transparent opacity-30 blur-[100px] -z-10">
-  </div>
-  <div
-    class="absolute bottom-[10%] left-[20%] w-72 h-72 rounded-full bg-gradient-to-r from-violet-600 to-transparent opacity-30 blur-[100px] -z-10">
-  </div>
+<body class="bg-white text-gray-800 font-sans overflow-x-hidden">
+  <nav class="fixed top-5 left-1/2 transform -translate-x-1/2 w-[80%] bg-white shadow-lg rounded-lg p-4 z-100">
+    <div class="flex justify-center items-center">
 
-  <header class="h-screen flex items-center justify-center relative">
-    <div class="absolute inset-0 pointer-events-none overflow-hidden">
-      <div
-        class="logo-card absolute top-[10%] left-[60%] w-20 h-20 flex items-center justify-center bg-white/10 backdrop-blur rounded-xl transform transition-transform duration-300 hover:scale-110">
-        <img src="/Assests/vscode-original.svg" alt="VSCode" class="w-10 h-10">
+      <div class="hidden md:flex justify-center space-x-8">
+        <a href="#about" class="hover:text-teal-500 transition-colors">About</a>
+        <a href="#experience" class="hover:text-teal-500 transition-colors">Experience</a>
+        <a href="#projects" class="hover:text-teal-500 transition-colors">Projects</a>
+        <a href="#skills" class="hover:text-teal-500 transition-colors">Skills</a>
+        <a href="#studies" class="hover:text-teal-500 transition-colors">Studies</a>
+        <a href="#contact" class="hover:text-teal-500 transition-colors">Contact</a>
       </div>
+
+      <button id="menu-btn" class="block md:hidden p-2 focus:outline-none" aria-label="Toggle menu">
+        <svg class="w-6 h-6 text-teal-500" fill="none" stroke="currentColor" viewBox="0 0 24 24"
+          xmlns="http://www.w3.org/2000/svg">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
+        </svg>
+      </button>
+    </div>
+
+    <!-- Meniu Mobil -->
+    <div id="mobile-menu" class="hidden md:hidden mt-4">
+      <a href="#about" class="block px-4 py-2 rounded hover:bg-teal-100">About</a>
+      <a href="#experience" class="block px-4 py-2 rounded hover:bg-teal-100">Experience</a>
+      <a href="#projects" class="block px-4 py-2 rounded hover:bg-teal-100">Projects</a>
+      <a href="#skills" class="block px-4 py-2 rounded hover:bg-teal-100">Skills</a>
+      <a href="#studies" class="block px-4 py-2 rounded hover:bg-teal-100">Studies</a>
+      <a href="#contact" class="block px-4 py-2 rounded hover:bg-teal-100">Contact</a>
+    </div>
+  </nav>
+
+  <header
+    class="h-screen flex flex-col items-center justify-center bg-gradient-to-r from-gray-700 to-gray-900 md:flex-row md:justify-around p-4 overflow-hidden">
+    <div class="text-center mb-8 md:mb-0">
+      <h1 class="text-5xl md:text-6xl font-bold text-white">Hi, I am Boronciuc Adrian</h1>
+      <p class="text-xl md:text-2xl mt-4 text-white">A Frontend Developer</p>
+    </div>
+
+    <div class="relative flex justify-center items-center md:mt-0 mt-[170px]">
+
+      <img src="https://upload.wikimedia.org/wikipedia/commons/a/a7/React-icon.svg" alt="React Logo"
+        class="w-20 h-20 md:w-24 md:h-24 z-10">
+
+      <!-- Orbit 1 -->
       <div
-        class="logo-card absolute top-[20%] left-[30%] w-20 h-20 flex items-center justify-center bg-white/10 backdrop-blur rounded-xl transform transition-transform duration-300 hover:scale-110">
-        <img src="/Assests/tailwindcss-plain.svg" alt="VSCode" class="w-10 h-10">
+        class="absolute flex justify-center items-center w-32 h-32 md:w-48 md:h-48 border border-white/30 rounded-full orbit-1">
+        <div class="absolute top-[-20px] md:top-[-25px] bg-white/20 p-1 md:p-2 rounded-lg">
+          <img src="/Assests/vuejs-original.svg" alt="Vue Logo" class="w-6 h-6 md:w-8 md:h-8">
+        </div>
       </div>
+
+      <!-- Orbit 2 -->
       <div
-        class="logo-card absolute bottom-[25%] left-[5%] w-20 h-20 flex items-center justify-center bg-white/10 backdrop-blur rounded-xl transform transition-transform duration-300 hover:scale-110">
-        <img src="/Assests/figma-original.svg" alt="VSCode" class="w-10 h-10">
+        class="absolute flex justify-center items-center w-48 h-48 md:w-64 md:h-64 border border-white/30 rounded-full orbit-2">
+        <div class="absolute top-[-20px] md:top-[-25px] bg-white/20 p-1 md:p-2 rounded-lg">
+          <img src="/Assests/github-original.svg" alt="Git Logo" class="w-6 h-6 md:w-8 md:h-8">
+        </div>
       </div>
+
+      <!-- Orbit 3 -->
       <div
-        class="logo-card absolute top-[30%] left-[10%] w-20 h-20 flex items-center justify-center bg-white/10 backdrop-blur rounded-xl transform transition-transform duration-300 hover:scale-110">
-        <img src="/Assests/react-original.svg" alt="VSCode" class="w-10 h-10">
+        class="absolute flex justify-center items-center w-[17rem] h-[17rem] md:w-[22rem] md:h-[22rem] border border-white/30 rounded-full orbit-3">
+        <div class="absolute top-[-20px] md:top-[-25px] bg-white/20 p-1 md:p-2 rounded-lg">
+          <img src="Assests/tailwindcss-plain.svg" alt="Tailwind Logo" class="w-6 h-6 md:w-8 md:h-8">
+        </div>
       </div>
+
+      <!-- Orbit 4 -->
       <div
-        class="logo-card absolute md:top-[25%] top-[25%] md:left-[20%] left-[70%] w-20 h-20 flex items-center justify-center bg-white/10 backdrop-blur rounded-xl transform transition-transform duration-300 hover:scale-110">
-        <img src="/Assests/vuejs-original.svg" alt="Vue" class="w-10 h-10">
+        class="absolute flex justify-center items-center w-[22rem] h-[22rem] md:w-[28rem] md:h-[28rem] border border-white/30 rounded-full orbit-4">
+        <div class="absolute top-[-20px] md:top-[-25px] bg-white/20 p-1 md:p-2 rounded-lg">
+          <img src="Assests/figma-original.svg" alt="Figma Logo" class="w-6 h-6 md:w-8 md:h-8">
+        </div>
       </div>
+
+      <!-- Orbit 5 -->
       <div
-        class="logo-card absolute top-[70%] left-[35%] w-20 h-20 flex items-center justify-center bg-white/10 backdrop-blur rounded-xl transform transition-transform duration-300 hover:scale-110">
-        <img src="/Assests/linux-original.svg" alt="VSCode" class="w-10 h-10">
-      </div>
-      <div
-        class="logo-card absolute md:top-[60%] top-[70%] md:right-[40%] right-[20%] w-20 h-20 flex items-center justify-center bg-white/10 backdrop-blur rounded-xl transform transition-transform duration-300 hover:scale-110">
-        <img src="/Assests/github-original.svg" alt="GitHub" class="w-10 h-10">
+        class="absolute flex justify-center items-center w-[28rem] h-[28rem] md:w-[36rem] md:h-[36rem] border border-white/30 rounded-full orbit-5">
+        <div class="absolute top-[-20px] md:top-[-25px] bg-white/20 p-1 md:p-2 rounded-lg">
+          <img src="Assests/vscode-original.svg" alt="VSCode Logo" class="w-6 h-6 md:w-8 md:h-8">
+        </div>
       </div>
     </div>
 
-    <div class="container mx-auto px-4 flex items-center justify-between relative z-10">
-      <div class="text-center md:text-left">
-        <h1 class="text-6xl font-bold text-teal-500">BORONCIUC ADRIAN</h1>
-        <p class="text-2xl mt-4 text-pink-600">FRONTEND DEVELOPER</p>
-        <nav class="mt-8">
-          <a href="#about" class="mx-3 hover:text-teal-500 transition-colors">About</a>
-          <a href="#experience" class="mx-3 hover:text-teal-500 transition-colors">Experience</a>
-          <a href="#projects" class="mx-3 hover:text-teal-500 transition-colors">Projects</a>
-          <a href="#skills" class="mx-3 hover:text-teal-500 transition-colors">Skills</a>
-          <a href="#studies" class="mx-3 hover:text-teal-500 transition-colors">Studies</a>
-          <a href="#contact" class="mx-3 hover:text-teal-500 transition-colors">Contact</a>
-        </nav>
-      </div>
-      <div class="hidden md:block">
-        <img src="/Assests/image.jpg" class="rounded-lg shadow-lg max-h-[70vh] relative -z-10">
-      </div>
-    </div>
   </header>
-
-  <section id="about" class="py-20 relative">
+  <section id="about" class="py-20 bg-gray-50">
     <div class="container mx-auto px-4">
-      <div class="text-center">
+      <div class="text-center mb-10">
         <h2 class="text-4xl font-bold mb-6 text-teal-500">About Me</h2>
-        <div class="max-w-2xl mx-auto">
-          <div
-            class="bg-white/10 backdrop-blur rounded-xl p-4 transform transition-all duration-300 hover:-translate-y-2 hover:shadow-xl">
-            <p class="text-lg">
-              I am a skilled web developer with two years of hands-on experience in coding and scripting. Through
-              self-driven projects
-              and continuous learning, I have developed strong problem-solving abilities and a keen eye for detail. I am
-              passionate
-              about writing clean, efficient code and collaborating with others to build functional and visually
-              appealing
-              applications. While I have not yet worked in a company setting, I am eager to apply my knowledge in a
-              professional
-              environment and grow as a developer.
-            </p>
-          </div>
+      </div>
+      <div class="max-w-4xl mx-auto flex flex-col md:flex-row items-center gap-8">
+        <!-- Image Section -->
+        <div class="flex-shrink-0">
+          <img src="/Assests/image.jpg" alt="About Me" class="w-64 h-64 rounded-full shadow-lg object-cover" />
+        </div>
+
+        <!-- Text Section -->
+        <div class="bg-white rounded-xl p-6 shadow-lg">
+          <p class="text-lg">
+            I am a skilled web developer with two years of hands-on experience in coding and scripting. Through
+            self-driven projects and continuous learning, I have developed strong problem-solving abilities and a keen
+            eye for detail. I am passionate about writing clean, efficient code and collaborating with others to build
+            functional and visually appealing applications. While I have not yet worked in a company setting, I am
+            eager to apply my knowledge in a professional environment and grow as a developer.
+          </p>
         </div>
       </div>
     </div>
   </section>
 
-  <section id="experience" class="py-20 relative">
+
+  <section id="experience" class="py-20">
     <div class="container mx-auto px-4">
       <h2 class="text-4xl font-bold text-center mb-12 text-teal-500">Experience</h2>
       <div class="flex items-center justify-center">
-        <div
-          class="bg-white/10 backdrop-blur rounded-xl p-4 transform transition-all duration-300 hover:-translate-y-2 hover:shadow-xl md:w-1/2 w-3/4">
-          <h3 class="text-2xl font-bold text-pink-600">Frontend Development</h3>
+        <div class="bg-white rounded-xl p-6 shadow-lg md:w-1/2 w-3/4">
+          <h3 class="text-2xl font-bold text-gray-700">Frontend Development</h3>
           <p class="mt-4">
             Website design and development, maintaining old projects, bug-fixing, and developing SPAs and SSR
-            applications.
-            I have learned frontend development through hands-on projects, self-study, and continuous experimentation.
-            By tackling real-world challenges and exploring new technologies, I have refined my skills in building
-            modern,
-            responsive, and user-friendly web applications.
+            applications. I have learned frontend development through hands-on projects, self-study, and continuous
+            experimentation. By tackling real-world challenges and exploring new technologies, I have refined my skills
+            in building modern, responsive, and user-friendly web applications.
           </p>
         </div>
-
       </div>
     </div>
   </section>
 
-  <section id="projects" class="py-20 relative">
+  <section id="projects" class="py-20 bg-gray-50">
     <div class="container mx-auto px-4">
       <h2 class="text-4xl font-bold text-center mb-12 text-teal-500">Projects</h2>
       <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-        <div
-          class="bg-white/10 backdrop-blur rounded-xl p-4 transform transition-all duration-300 hover:-translate-y-2 hover:shadow-xl">
+        <div class="bg-white rounded-xl p-6 shadow-lg">
           <img src="/Assests/micropagic.png" alt="Project 1" class="w-full h-48 object-cover rounded-lg mb-4">
           <div>
-            <h3 class="text-xl font-bold text-pink-600">MicroMagic</h3>
+            <h3 class="text-xl font-bold text-gray-700">MicroMagic</h3>
             <p class="mt-2">A modern E-Commerce website made with Vue.js, TailwindCSS</p>
             <div class="mt-4 flex gap-4">
               <a href="https://vuejs-micromagic.vercel.app/" target="_blank"
-                class="bg-pink-600 text-white px-4 py-2 rounded-lg hover:bg-pink-700 transition">Live Demo</a>
+                class="bg-teal-600 text-white px-4 py-2 rounded-lg hover:bg-teal-700 transition">Live Demo</a>
               <a href="https://github.com/adrian-237/vuejs-micromagic" target="_blank"
                 class="bg-gray-800 text-white px-4 py-2 rounded-lg hover:bg-gray-900 transition">GitHub</a>
             </div>
           </div>
         </div>
 
-        <div
-          class="bg-white/10 backdrop-blur rounded-xl p-4 transform transition-all duration-300 hover:-translate-y-2 hover:shadow-xl">
+        <div class="bg-white rounded-xl p-6 shadow-lg">
           <img src="/Assests/platzi.png" alt="Project 1" class="w-full h-48 object-cover rounded-lg mb-4">
           <div>
-            <h3 class="text-xl font-bold text-pink-600">E-Commerce Website</h3>
+            <h3 class="text-xl font-bold text-gray-700">E-Commerce Website</h3>
             <p class="mt-2">A Commerce website made with React.js, that uses Platzi Fake store API. (Working with API
               fetching)</p>
             <div class="mt-4 flex gap-4">
               <a href="https://platzi-shop-five.vercel.app/" target="_blank"
-                class="bg-pink-600 text-white px-4 py-2 rounded-lg hover:bg-pink-700 transition">Live Demo</a>
+                class="bg-teal-600 text-white px-4 py-2 rounded-lg hover:bg-teal-700 transition">Live Demo</a>
               <a href="https://github.com/adrian-237/PlatziShop" target="_blank"
                 class="bg-gray-800 text-white px-4 py-2 rounded-lg hover:bg-gray-900 transition">GitHub</a>
             </div>
           </div>
         </div>
 
-        <div
-          class="bg-white/10 backdrop-blur rounded-xl p-4 transform transition-all duration-300 hover:-translate-y-2 hover:shadow-xl">
+        <div class="bg-white rounded-xl p-6 shadow-lg">
           <img src="/Assests/moviedb.png" alt="Project 1" class="w-full h-48 object-cover rounded-lg mb-4">
           <div>
-            <h3 class="text-xl font-bold text-pink-600">MovieDB</h3>
+            <h3 class="text-xl font-bold text-gray-700">MovieDB</h3>
             <p class="mt-2">Movie database with filters. Uses TMDB API, Javascript, TailwindCSS</p>
             <div class="mt-4 flex gap-4">
               <a href="https://movie-db-three-xi.vercel.app/" target="_blank"
-                class="bg-pink-600 text-white px-4 py-2 rounded-lg hover:bg-pink-700 transition">Live Demo</a>
+                class="bg-teal-600 text-white px-4 py-2 rounded-lg hover:bg-teal-700 transition">Live Demo</a>
               <a href="https://github.com/adrian-237/MovieDB" target="_blank"
                 class="bg-gray-800 text-white px-4 py-2 rounded-lg hover:bg-gray-900 transition">GitHub</a>
             </div>
           </div>
         </div>
-        <div
-          class="bg-white/10 backdrop-blur rounded-xl p-4 transform transition-all duration-300 hover:-translate-y-2 hover:shadow-xl">
+
+        <div class="bg-white rounded-xl p-6 shadow-lg">
           <img src="/Assests/todoapp.png" alt="Project 1" class="w-full h-48 object-cover rounded-lg mb-4">
           <div>
-            <h3 class="text-xl font-bold text-pink-600">TO DO</h3>
+            <h3 class="text-xl font-bold text-gray-700">TO DO</h3>
             <p class="mt-2">To Do App made in React.js. Work with hooks, components and local storage.</p>
             <div class="mt-4 flex gap-4">
               <a href="https://to-do-app-rho-two.vercel.app/" target="_blank"
-                class="bg-pink-600 text-white px-4 py-2 rounded-lg hover:bg-pink-700 transition">Live Demo</a>
+                class="bg-teal-600 text-white px-4 py-2 rounded-lg hover:bg-teal-700 transition">Live Demo</a>
               <a href="https://github.com/adrian-237/ToDoApp" target="_blank"
                 class="bg-gray-800 text-white px-4 py-2 rounded-lg hover:bg-gray-900 transition">GitHub</a>
             </div>
           </div>
         </div>
-        <div
-          class="bg-white/10 backdrop-blur rounded-xl p-4 transform transition-all duration-300 hover:-translate-y-2 hover:shadow-xl">
+
+        <div class="bg-white rounded-xl p-6 shadow-lg">
           <img src="/Assests/portfolio.png" alt="Project 1" class="w-full h-48 object-cover rounded-lg mb-4">
           <div>
-            <h3 class="text-xl font-bold text-pink-600">Potfolio Website</h3>
-            <p class="mt-2">My Portfolio Website, developed with tailwindcss</p>
+            <h3 class="text-xl font-bold text-gray-700">Portfolio Website</h3>
+            <p class="mt-2">My Portfolio Website, developed with TailwindCSS</p>
             <div class="mt-4 flex gap-4">
               <a href="https://portfolioboronciucadrian.vercel.app/" target="_blank"
-                class="bg-pink-600 text-white px-4 py-2 rounded-lg hover:bg-pink-700 transition">Live Demo</a>
+                class="bg-teal-600 text-white px-4 py-2 rounded-lg hover:bg-teal-700 transition">Live Demo</a>
               <a href="https://github.com/adrian-237/Portfolio" target="_blank"
                 class="bg-gray-800 text-white px-4 py-2 rounded-lg hover:bg-gray-900 transition">GitHub</a>
             </div>
           </div>
         </div>
       </div>
-
     </div>
   </section>
 
-  <section id="skills" class="py-20 relative">
+  <section id="skills" class="py-20">
     <div class="container mx-auto px-4">
       <h2 class="text-4xl font-bold text-center mb-12 text-teal-500">Skills</h2>
       <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
         <div
-          class="bg-white/10 backdrop-blur rounded-xl p-4 text-center transform transition-all duration-300 hover:-translate-y-2 hover:shadow-xl">
-          <h3 class="text-xl font-bold text-pink-600">HTML/CSS</h3>
+          class="bg-white rounded-xl p-6 text-center shadow-lg transition-all duration-300 hover:-translate-y-2 hover:shadow-2xl">
+          <h3 class="text-xl font-bold text-gray-700">HTML/CSS</h3>
         </div>
         <div
-          class="bg-white/10 backdrop-blur rounded-xl p-4 text-center transform transition-all duration-300 hover:-translate-y-2 hover:shadow-xl">
-          <h3 class="text-xl font-bold text-pink-600">React.js</h3>
+          class="bg-white rounded-xl p-6 text-center shadow-lg transition-all duration-300 hover:-translate-y-2 hover:shadow-2xl">
+          <h3 class="text-xl font-bold text-gray-700">React.js</h3>
         </div>
         <div
-          class="bg-white/10 backdrop-blur rounded-xl p-4 text-center transform transition-all duration-300 hover:-translate-y-2 hover:shadow-xl">
-          <h3 class="text-xl font-bold text-pink-600">Vue.js</h3>
+          class="bg-white rounded-xl p-6 text-center shadow-lg transition-all duration-300 hover:-translate-y-2 hover:shadow-2xl">
+          <h3 class="text-xl font-bold text-gray-700">Vue.js</h3>
         </div>
         <div
-          class="bg-white/10 backdrop-blur rounded-xl p-4 text-center transform transition-all duration-300 hover:-translate-y-2 hover:shadow-xl">
-          <h3 class="text-xl font-bold text-pink-600">Javascript</h3>
+          class="bg-white rounded-xl p-6 text-center shadow-lg transition-all duration-300 hover:-translate-y-2 hover:shadow-2xl">
+          <h3 class="text-xl font-bold text-gray-700">Javascript</h3>
         </div>
         <div
-          class="bg-white/10 backdrop-blur rounded-xl p-4 text-center transform transition-all duration-300 hover:-translate-y-2 hover:shadow-xl">
-          <h3 class="text-xl font-bold text-pink-600">TailwindCSS</h3>
+          class="bg-white rounded-xl p-6 text-center shadow-lg transition-all duration-300 hover:-translate-y-2 hover:shadow-2xl">
+          <h3 class="text-xl font-bold text-gray-700">TailwindCSS</h3>
         </div>
         <div
-          class="bg-white/10 backdrop-blur rounded-xl p-4 text-center transform transition-all duration-300 hover:-translate-y-2 hover:shadow-xl">
-          <h3 class="text-xl font-bold text-pink-600">Bootstrap</h3>
+          class="bg-white rounded-xl p-6 text-center shadow-lg transition-all duration-300 hover:-translate-y-2 hover:shadow-2xl">
+          <h3 class="text-xl font-bold text-gray-700">Bootstrap</h3>
         </div>
         <div
-          class="bg-white/10 backdrop-blur rounded-xl p-4 text-center transform transition-all duration-300 hover:-translate-y-2 hover:shadow-xl">
-          <h3 class="text-xl font-bold text-pink-600">Linux</h3>
+          class="bg-white rounded-xl p-6 text-center shadow-lg transition-all duration-300 hover:-translate-y-2 hover:shadow-2xl">
+          <h3 class="text-xl font-bold text-gray-700">Linux</h3>
         </div>
         <div
-          class="bg-white/10 backdrop-blur rounded-xl p-4 text-center transform transition-all duration-300 hover:-translate-y-2 hover:shadow-xl">
-          <h3 class="text-xl font-bold text-pink-600">MySQL</h3>
+          class="bg-white rounded-xl p-6 text-center shadow-lg transition-all duration-300 hover:-translate-y-2 hover:shadow-2xl">
+          <h3 class="text-xl font-bold text-gray-700">MySQL</h3>
         </div>
-
       </div>
     </div>
   </section>
 
-  <section id="studies" class="py-20 relative">
+  <section id="studies" class="py-20 bg-gray-50">
     <div class="container mx-auto px-4">
       <h2 class="text-4xl font-bold text-center mb-12 text-teal-500">Studies</h2>
       <div class="grid md:grid-cols-2 gap-8">
         <div
-          class="bg-white/10 backdrop-blur rounded-xl p-4 transform transition-all duration-300 hover:-translate-y-2 hover:shadow-xl">
-          <h3 class="text-2xl font-bold text-pink-600">School</h3>
+          class="bg-white rounded-xl p-6 shadow-lg transition-all duration-300 hover:-translate-y-2 hover:shadow-2xl">
+          <h3 class="text-2xl font-bold text-gray-700">School</h3>
           <p class="mt-4">IP Gimnaziu Teoretic Hîjdieni, 2012 - 2021</p>
         </div>
         <div
-          class="bg-white/10 backdrop-blur rounded-xl p-4 transform transition-all duration-300 hover:-translate-y-2 hover:shadow-xl">
-          <h3 class="text-2xl font-bold text-pink-600">College</h3>
+          class="bg-white rounded-xl p-6 shadow-lg transition-all duration-300 hover:-translate-y-2 hover:shadow-2xl">
+          <h3 class="text-2xl font-bold text-gray-700">College</h3>
           <p class="mt-4">CEITI, 2021-2025</p>
         </div>
       </div>
     </div>
   </section>
 
-  <section id="contact" class="py-20 relative">
+  <section id="contact" class="py-20 bg-gray-50">
     <div class="container mx-auto px-4">
       <h2 class="text-4xl font-bold text-center mb-12 text-teal-500">Contact Me</h2>
-      <form class="max-w-2xl mx-auto">
-        <div class="mb-4">
-          <label for="name" class="block mb-2">Name</label>
-          <input type="text" id="name" class="w-full p-2 rounded bg-gray-800 text-white">
+
+      <div class="max-w-4xl mx-auto flex flex-col md:flex-row gap-8">
+
+        <div class="flex items-center bg-white p-6 shadow-md rounded-lg">
+          <svg class="w-8 h-8 text-teal-500 mr-4" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"
+            xmlns="http://www.w3.org/2000/svg">
+            <path stroke-linecap="round" stroke-linejoin="round"
+              d="M3 8l7.89 5.26a3 3 0 003.22 0L22 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z">
+            </path>
+          </svg>
+          <div>
+            <h3 class="text-lg font-semibold text-gray-700">Email</h3>
+            <p class="text-gray-500">boronciuc.adrian@gmail.com</p>
+          </div>
         </div>
-        <div class="mb-4">
-          <label for="email" class="block mb-2">Email</label>
-          <input type="email" id="email" class="w-full p-2 rounded bg-gray-800 text-white">
+
+
+        <div class="flex items-center bg-white p-6 shadow-md rounded-lg">
+          <svg class="w-8 h-8 text-teal-500 mr-4" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"
+            xmlns="http://www.w3.org/2000/svg">
+            <path stroke-linecap="round" stroke-linejoin="round"
+              d="M3 5a2 2 0 012-2h3.28a2 2 0 011.94 1.52l.42 1.68a2 2 0 01-.45 1.94l-1.1 1.1a16 16 0 006.36 6.36l1.1-1.1a2 2 0 011.94-.45l1.68.42a2 2 0 011.52 1.94V19a2 2 0 01-2 2h-2A16 16 0 013 5z">
+            </path>
+          </svg>
+          <div>
+            <h3 class="text-lg font-semibold text-gray-700">Phone</h3>
+            <p class="text-gray-500">+373 699-855-04</p>
+          </div>
         </div>
-        <div class="mb-4">
-          <label for="message" class="block mb-2">Message</label>
-          <textarea id="message" class="w-full p-2 rounded bg-gray-800 text-white" rows="4"></textarea>
+
+        <div class="flex items-center bg-white p-6 shadow-md rounded-lg">
+          <svg class="w-8 h-8 text-teal-500 mr-4" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"
+            xmlns="http://www.w3.org/2000/svg">
+            <path stroke-linecap="round" stroke-linejoin="round"
+              d="M12 10c2.21 0 4-1.79 4-4S14.21 2 12 2 8 3.79 8 6s1.79 4 4 4zm0 2c-2.67 0-8 1.34-8 4v4h16v-4c0-2.66-5.33-4-8-4z">
+            </path>
+          </svg>
+          <div>
+            <h3 class="text-lg font-semibold text-gray-700">Location</h3>
+            <p class="text-gray-500">Hîjdieni, Glodeni, Moldova</p>
+          </div>
         </div>
-        <button type="submit"
-          class="bg-teal-500 hover:bg-teal-600 text-white px-6 py-2 rounded transition-colors">Send</button>
-      </form>
+
+      </div>
     </div>
   </section>
 
-  <footer class="py-6 text-center relative">
+  <footer class="py-6 text-center bg-gray-50">
     <p>&copy; 2023 BORONCIUC ADRIAN. All rights reserved.</p>
     <div class="mt-4">
       <a href="#" class="mx-2 hover:text-teal-500 transition-colors"><i class="fab fa-linkedin"></i></a>
@@ -293,37 +370,36 @@
   </footer>
 
   <script>
-    function random(min, max) {
-      return Math.random() * (max - min) + min;
+    const menuBtn = document.getElementById('menu-btn');
+    const mobileMenu = document.getElementById('mobile-menu');
+
+    menuBtn.addEventListener('click', () => {
+      mobileMenu.classList.toggle('hidden');
+    });
+
+    const text = "Hi, I am Boronciuc Adrian";
+
+    const typingTextElement = document.getElementById("typing-text");
+
+    let index = 0;
+
+
+    function type() {
+
+      if (index < text.length) {
+
+        typingTextElement.textContent += text.charAt(index);
+
+        index++;
+
+        setTimeout(type, 100); // Adjust typing speed here (in milliseconds)
+
+      }
+
     }
 
-    document.querySelectorAll('.logo-card').forEach(card => {
-      gsap.set(card, {
-        x: random(-20, 20),
-        y: random(-20, 20),
-        rotation: random(-10, 10)
-      });
 
-      gsap.to(card, {
-        duration: random(2, 4),
-        x: random(-30, 30),
-        y: random(-30, 30),
-        rotation: random(-15, 15),
-        ease: "power1.inOut",
-        repeat: -1,
-        yoyo: true,
-        repeatRefresh: true,
-        onRepeat: function () {
-          gsap.to(card, {
-            duration: random(2, 4),
-            x: random(-30, 30),
-            y: random(-30, 30),
-            rotation: random(-15, 15),
-            ease: "power1.inOut"
-          });
-        }
-      });
-    });
+    type();
   </script>
 </body>
 
